@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row">
+                <div *ngFor="let i of viewData" class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
+                    <div class="card border-danger mb-3">
+                        <div class="card-header bg-transparent border-secondary">{{i.name}}</div>
+                        <div class="card-body text-success">
+                          <h5 class="card-title">{{i.friendName}}</h5>
+                          <p class="card-text">{{i.DescribeYourFriend}}</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">{{i.friendNickName}}</div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
