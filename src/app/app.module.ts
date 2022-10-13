@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdddataComponent } from './adddata/adddata.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewdataComponent } from './viewdata/viewdata.component';
 
 const appRoutes:Routes=[
   {
     path:"",component:AdddataComponent
+  },
+  {
+    path:"viewdata",component:ViewdataComponent
   },
 ]
 
@@ -17,7 +21,8 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    AdddataComponent
+    AdddataComponent,
+    ViewdataComponent
   ],
   imports: [
     BrowserModule,
