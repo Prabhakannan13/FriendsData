@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-adddata',
@@ -7,7 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdddataComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) { }
+  name=""
+  friendName=""
+  friendNickName=""
+  DescribeYourFriend=""
+
+  readValues=()=>{
+    let data={
+    "name":this.name,
+    "friendName":this.friendName,
+    "friendNickName":this.friendNickName,
+    "DescribeYourFriend":this.DescribeYourFriend
+    }
+    console.log(data)
+    this.myapi.adddata(data).subscribe(
+      (response)=>{
+        console.log(response)
+        alert("Successfully added")
+      }   
+    )
+  }
+
 
   ngOnInit(): void {
   }
