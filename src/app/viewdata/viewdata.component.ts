@@ -11,10 +11,12 @@ export class ViewdataComponent implements OnInit {
   constructor(private myapi:ApiService) {
     this.fetchData()
    }
+   status:boolean=false
 fetchData=()=>{
   this.myapi.viewData().subscribe(
     (data)=>{
       this.viewData=data
+      this.status=true
     }
   )
 }
