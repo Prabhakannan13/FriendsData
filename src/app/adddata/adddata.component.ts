@@ -13,7 +13,7 @@ export class AdddataComponent implements OnInit {
   friendName=""
   friendNickName=""
   DescribeYourFriend=""
-
+status:boolean=false
   readValues=()=>{
     let data={
     "name":this.name,
@@ -26,6 +26,12 @@ export class AdddataComponent implements OnInit {
       (response)=>{
         console.log(response)
         alert("Successfully added")
+        this.name=""
+        this.friendName=""
+        this.friendNickName=""
+        this.DescribeYourFriend=""
+        this.status=true
+
       }   
     )
   }
